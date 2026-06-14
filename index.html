@@ -1,48 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Aglio e Olio Pasta Recipe</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aglio e Olio Pasta</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --primary: #6200ee;
+    --primary-dark: #3700b3;
+    --secondary: #03dac6;
+    --background: #f5f5f5;
+    --surface: #ffffff;
+    --text-primary: #212121;
+    --text-secondary: #757575;
+    --shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Roboto',sans-serif;
+}
+
+body{
+    background:var(--background);
+    color:var(--text-primary);
+}
+
+.hero{
+    height:60vh;
+    background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=1600");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:3.5rem;
+    margin-bottom:10px;
+    font-weight:700;
+}
+
+.hero-content p{
+    font-size:1.2rem;
+    opacity:.9;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding:40px 0;
+}
+
+.recipe-info{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:-70px;
+}
+
+.card{
+    background:var(--surface);
+    border-radius:16px;
+    padding:24px;
+    box-shadow:var(--shadow);
+    transition:all .3s ease;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.info-card{
+    text-align:center;
+}
+
+.info-card h3{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.section{
+    margin-top:30px;
+}
+
+.section h2{
+    color:var(--primary);
+    margin-bottom:20px;
+    font-size:2rem;
+}
+
+ul li,
+ol li{
+    margin-bottom:12px;
+    color:var(--text-secondary);
+}
+
+.recipe-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.btn{
+    display:inline-block;
+    background:var(--primary);
+    color:white;
+    text-decoration:none;
+    padding:12px 24px;
+    border-radius:30px;
+    margin-top:20px;
+    font-weight:500;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:var(--primary-dark);
+}
+
+footer{
+    margin-top:50px;
+    background:#1f1f1f;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+.chip{
+    display:inline-block;
+    background:var(--secondary);
+    color:black;
+    padding:8px 15px;
+    border-radius:20px;
+    margin:5px;
+    font-size:14px;
+}
+
+@media(max-width:768px){
+
+    .hero-content h1{
+        font-size:2.4rem;
+    }
+
+    .recipe-grid{
+        grid-template-columns:1fr;
+    }
+
+    .recipe-info{
+        margin-top:20px;
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <h1>Aglio e Olio Pasta</h1>
+<section class="hero">
+    <div class="hero-content">
+        <h1>🍝 Aglio e Olio</h1>
+        <p>Classic Italian Pasta with Garlic & Olive Oil</p>
+    </div>
+</section>
 
-    <p>
-        A classic Italian pasta dish made with garlic, olive oil, and chili flakes.
-        Simple, delicious, and ready in under 20 minutes.
-    </p>
+<div class="container">
 
-    <h2>Ingredients</h2>
-    <ul>
-        <li>200g Spaghetti</li>
-        <li>4–5 Garlic cloves, thinly sliced</li>
-        <li>3 tbsp Extra Virgin Olive Oil</li>
-        <li>1 tsp Red Chili Flakes</li>
-        <li>2 tbsp Fresh Parsley, chopped</li>
-        <li>Salt to taste</li>
-        <li>¼ cup Reserved Pasta Water</li>
-        <li>Grated Parmesan Cheese (optional)</li>
-    </ul>
+    <div class="recipe-info">
+        <div class="card info-card">
+            <h3>⏱ Prep Time</h3>
+            <p>5 Minutes</p>
+        </div>
 
-    <h2>Instructions</h2>
-    <ol>
-        <li>Boil salted water in a large pot.</li>
-        <li>Cook spaghetti until al dente.</li>
-        <li>Reserve ¼ cup pasta water and drain the pasta.</li>
-        <li>Heat olive oil in a pan over low-medium heat.</li>
-        <li>Add garlic and cook until lightly golden.</li>
-        <li>Add chili flakes and stir.</li>
-        <li>Add reserved pasta water and mix.</li>
-        <li>Toss in the cooked spaghetti.</li>
-        <li>Add parsley and season with salt.</li>
-        <li>Serve hot with Parmesan cheese if desired.</li>
-        <li>Enjoy!!.</li>
-    </ol>
+        <div class="card info-card">
+            <h3>🔥 Cook Time</h3>
+            <p>15 Minutes</p>
+        </div>
 
-    <h2>Cooking Time</h2>
-    <p>Preparation: 5 minutes</p>
-    <p>Cooking: 15 minutes</p>
+        <div class="card info-card">
+            <h3>🍽 Servings</h3>
+            <p>2 People</p>
+        </div>
+    </div>
+
+    <div class="section recipe-grid">
+
+        <div class="card">
+            <h2>Ingredients</h2>
+
+            <div>
+                <span class="chip">Spaghetti</span>
+                <span class="chip">Garlic</span>
+                <span class="chip">Olive Oil</span>
+                <span class="chip">Parsley</span>
+                <span class="chip">Chili Flakes</span>
+            </div>
+
+            <br>
+
+            <ul>
+                <li>200g Spaghetti</li>
+                <li>5 Garlic Cloves (thinly sliced)</li>
+                <li>3 tbsp Extra Virgin Olive Oil</li>
+                <li>1 tsp Chili Flakes</li>
+                <li>2 tbsp Fresh Parsley</li>
+                <li>½ Cup Reserved Pasta Water</li>
+                <li>Salt & Black Pepper</li>
+                <li>Parmesan Cheese (optional)</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Instructions</h2>
+
+            <ol>
+                <li>Boil salted water and cook spaghetti until al dente.</li>
+                <li>Reserve pasta water before draining.</li>
+                <li>Heat olive oil over low heat.</li>
+                <li>Sauté garlic until lightly golden.</li>
+                <li>Add chili flakes and stir.</li>
+                <li>Add pasta water to create a silky sauce.</li>
+                <li>Toss spaghetti into the pan.</li>
+                <li>Add parsley, salt and pepper.</li>
+                <li>Mix thoroughly and serve immediately!!.</li>
+            </ol>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <div class="card">
+            <h2>👨‍🍳 Chef's Tips</h2>
+
+            <ul>
+                <li>Never burn the garlic.</li>
+                <li>Use premium extra virgin olive oil.</li>
+                <li>Pasta water helps emulsify the sauce.</li>
+                <li>Serve immediately for best texture.</li>
+            </ul>
+
+            <a href="#" class="btn">View Recipe</a>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>🍝 Aglio e Olio Recipe | Material Design Inspired UI</p>
+</footer>
 
 </body>
 </html>
