@@ -1,7 +1,7 @@
 async function loadComments() {
 
     const response =
-        await fetch("http://localhost:3001/comments");
+        await fetch("http://65.2.177.154:3001/comments");
 
     const comments =
         await response.json();
