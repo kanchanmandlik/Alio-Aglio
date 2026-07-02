@@ -39,6 +39,6 @@ app.post("/comments", async (req, res) => {
     });
 });
 
-app.listen(3000, () => {
+app.listen(3001, () => {
     console.log("Server started");
 });
