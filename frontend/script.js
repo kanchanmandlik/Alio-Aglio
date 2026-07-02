@@ -1,7 +1,9 @@
+const API_URL = `http://${window.location.hostname}:3001`;
+
 async function loadComments() {
 
     const response =
-        await fetch("http://65.2.177.154:3001/comments");
+        await fetch(`${API_URL}/comments`);
 
     const comments =
         await response.json();
@@ -36,7 +38,7 @@ async function submitComment() {
         return;
     }
 
-    await fetch("http://localhost:3001/comments", {
+    await fetch(`${API_URL}/comments`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
